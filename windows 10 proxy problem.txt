@@ -1,0 +1,19 @@
+
+**** How to disable proxy on Windows 10 permanently 2018 ****
+
+i.  How to Fix "Can't Connect to Proxy Server" on Windows 10
+
+ii. HOW TO SOLVE" AUTOMATICALLY ENABLE" PROXY PROBLEM WINDOWS 10
+
+1. regedit
+
+2. HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings
+
+  Right click on Internet settings > Permission > check allow permission section 
+
+  Internet settings > Cache > Permission > check allow permission section 
+
+  Select Internet settings > check any name exist like  "Proxy settings per user", if exist then remove it
+
+
+   
