@@ -1,0 +1,36 @@
+
+******* How to allow, hide or block neighbor’s WiFi Networks on Windows Computers *******
+
+Note: open the Command Prompt with administrator privilege
+
+1. Block neighbor’s WiFi Networks on Windows
+
+	netsh wlan add filter permission=block ssid="Wireless Network Name" networktype=infrastructure
+	
+2. Remove a blocked WiFi network
+
+	 netsh wlan delete filter permission=block ssid="Wireless Network Name" networktype=infrastructure
+
+3. How to allow a WiFi network
+
+	netsh wlan add filter permission=allow ssid="Wireless Network Name" networktype=infrastructure
+
+   To hide all the networks except the allowed network, execute this command-
+
+	netsh wlan add filter permission=denyall networktype=infrastructure
+
+   If you want to remove the “deny all” filter or you want to remove all the network names from the blocklist, the following command will do the job
+
+	netsh wlan delete filter permission=denyall networktype=infrastructure
+
+5. Check all the filters
+
+	netsh wlan show filters
+
+6. Disadvantage of using these commands
+
+   The only disadvantage of using these commands is it doesn’t block the actual Wi-Fi router. It does block or allows the wireless network name. 
+ 
+   That implies that if you change the WiFi name, you will be able to overwrite the filter.
+
+
